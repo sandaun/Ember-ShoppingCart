@@ -1,0 +1,16 @@
+<h2>List of Products</h2>
+
+<container>
+  {{#each this.model as |product|}}
+    <card>
+      {{product.id}}
+      {{product.name}}
+      {{product.price}}
+    </card>
+  {{/each}}
+  {{#link-to "products" class="button"}}
+    About Us
+  {{/link-to}}
+</container>
+
+{{outlet}}
