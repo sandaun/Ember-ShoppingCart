@@ -9,6 +9,7 @@ export default function() {
         attributes: {
           name: 'Green tea',
           price: 3.11,
+          quantity: 0,
         }
       }, {
         type: 'product',
@@ -16,6 +17,7 @@ export default function() {
         attributes: {
           name: 'Strawberries',
           price: 5.00,
+          quantity: 0,
         }
       }, {
         type: 'product',
@@ -23,10 +25,14 @@ export default function() {
         attributes: {
           name: 'Coffee',
           price: 11.23,
+          quantity: 0,
         }
       }]
     };
   });
+  this.post('/products');
+  this.put('/products/:id');
+  this.get('/products/:id');
 }
 
   // These comments are here to help you get started. Feel free to delete them.

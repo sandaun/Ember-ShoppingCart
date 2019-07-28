@@ -3,14 +3,17 @@
 <container>
   {{#each this.model as |product|}}
     <card>
-      {{product.id}}
-      {{product.name}}
-      {{product.price}}
+      ID: {{product.id}}
+      Product: {{product.name}}
+      Price: {{product.price}}
+      Quantity: {{product.quantity}}
+      <div>
+        <button {{action 'addProduct' product}} type="button">
+        Add to basket
+        </button>
+      </div>
     </card>
   {{/each}}
-  {{#link-to "products" class="button"}}
-    About Us
-  {{/link-to}}
 </container>
 
 {{outlet}}
