@@ -11,7 +11,6 @@ export default Controller.extend({
   actions: { 
     addProduct(product) { 
       this.get('products').pushObject(product.name); 
-      console.log(this.products); // Shows the product added array
       let cofCount = 0, teaCount = 0, strawCount = 0;
       this.products.forEach(element => {
         if (element === 'Coffee') {
@@ -32,9 +31,6 @@ export default Controller.extend({
           
         }
       });
-      console.log(cofCount, 'coffee');
-      console.log(teaCount, 'tea');
-      console.log(strawCount, 'straw');
 
     }
   }

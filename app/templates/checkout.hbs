@@ -1,0 +1,17 @@
+<h2>Checkout</h2>
+
+<container>
+  {{#each this.model as |product|}}
+    <ul>
+      <li>Product: {{product.name}}</li>
+      <li>Price: {{product.price}} pounds</li>
+      <li>Quantity: {{product.quantity}}</li>
+      <li>Subtotal: {{subTotalCheckout}} </li>
+    </ul>
+  {{/each}}
+  {{#link-to "products" class="button"}}
+    Products
+  {{/link-to}}
+</container>
+
+{{outlet}}
