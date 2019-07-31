@@ -6,9 +6,19 @@
       <li>Product: {{product.name}}</li>
       <li>Price: {{product.price}} pounds</li>
       <li>Quantity: {{product.quantity}}</li>
-      <li>Subtotal: {{subTotalCheckout}} </li>
+      {{#if product.extra}}
+        Welcome back, <b>{{product.name}}</b>!
+      {{/if}}
+      <li>Subtotal: {{product.subTotalPrice}} </li>
+      <li>Discount: {{product.discount}}</li>
     </ul>
   {{/each}}
+  
+  <button {{action 'getSubTotals'}} type="button">
+  Calculate Total Amount
+  </button>
+  <div>TOTAL: {{subTotalCheckout}} </div>
+
   {{#link-to "products" class="button"}}
     Products
   {{/link-to}}
