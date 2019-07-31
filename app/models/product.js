@@ -12,21 +12,21 @@ export default Model.extend({
     let discountedPrice = 0;
     let discountAmount = 0;
     if (this.id === 'CF1' && this.quantity >= 3) {
-      discountedPrice = (this.price * 2) / 3;
+      discountedPrice = ((this.price * 2) / 3);
       discountAmount = ((this.price - discountedPrice) * this.quantity).toFixed(2);
       this.set('discount', discountAmount);
-      return (discountedPrice * this.quantity);
+      return Math.round((discountedPrice * this.quantity)*100)/100;
     } else if (this.id === 'SR1' && this.quantity >= 3) {
-        discountedPrice = this.price - 0.5;
+        discountedPrice = (this.price - 0.5);
         discountAmount = ((this.price - discountedPrice) * this.quantity).toFixed(2);
         this.set('discount', discountAmount);
-        return (discountedPrice * this.quantity);
+        return Math.round((discountedPrice * this.quantity)*100)/100;
     } else if (this.id === 'GR1') {
         let getOneFree = 0;
         getOneFree = Math.ceil(this.quantity / 2 * 1);
         discountAmount = getOneFree;
         this.set('discount', getOneFree);
-        return this.price * (this.quantity);
+        return Math.round((this.price * (this.quantity))*100)/100;
       }
     return this.price * this.quantity;
   }),

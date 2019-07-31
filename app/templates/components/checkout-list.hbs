@@ -4,6 +4,10 @@
     <li class="list-group-item">Price: £ {{product.price}}</li>
     <li class="list-group-item">Quantity: {{product.quantity}}</li>
     <li class="list-group-item">Subtotal: £ {{product.subTotalPrice}}</li>
-    <li class="list-group-item">Discount: £ {{product.discount}}</li>
+    {{#if (eq product.id 'GR1')}}
+      <li class="list-group-item">For free: {{product.discount}} units</li>
+    {{else}}
+      <li class="list-group-item">Discount: £ {{product.discount}}</li>
+    {{/if}}
   </ul>
 </div>
