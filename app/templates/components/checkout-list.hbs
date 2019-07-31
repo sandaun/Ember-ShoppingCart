@@ -1,7 +1,9 @@
-<ul>
-  <li>Product: {{product.name}}</li>
-  <li>Price: {{product.price}} pounds</li>
-  <li>Quantity: {{product.quantity}}</li>
-  <li>Subtotal: {{product.subTotalPrice}} </li>
-  <li>Discount: {{product.discount}}</li>
-</ul>
+<div class="card mt-4" style="width: 18rem;">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-primary">Product: {{product.name}}</li>
+    <li class="list-group-item">Price: £ {{product.price}}</li>
+    <li class="list-group-item">Quantity: {{product.quantity}}</li>
+    <li class="list-group-item">Subtotal: £ {{product.subTotalPrice}}</li>
+    <li class="list-group-item">Discount: £ {{product.discount}}</li>
+  </ul>
+</div>

@@ -28,7 +28,7 @@ export default Controller.extend({
     },
 
     sumTotal (coffeeSubTotal, teaSubTotal, strawberriesSubTotal) {
-      let totalCheckout = coffeeSubTotal + teaSubTotal + strawberriesSubTotal;
+      let totalCheckout = (coffeeSubTotal + teaSubTotal + strawberriesSubTotal).toFixed(2);
       this.set('subTotalCheckout', totalCheckout)
     }
     

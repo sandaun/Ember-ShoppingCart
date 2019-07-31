@@ -1,11 +1,10 @@
-<ul>
-  <li>ID: {{product.id}}</li>
-  <li>Product: {{product.name}}</li>
-  <li>Price: {{product.price}}</li>
-  <li>Quantity: {{product.quantity}}</li>
-  <div>
-    <button {{action 'addProduct' product}} type="button">
-    Add to basket
-    </button>
-  </div>
-</ul>
+<div class="card mt-4" style="width: 18rem;">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-primary">Product: {{product.name}}</li>
+    <li class="list-group-item">Price: £ {{product.price}} </li>
+    <li class="list-group-item">Quantity: {{product.quantity}}</li>
+      <button {{action 'addProduct' product}} type="button" class="btn btn-info btn-sm">
+      Add to basket
+      </button>
+  </ul>
+</div>

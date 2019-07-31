@@ -1,18 +1,24 @@
-<h2>Checkout</h2>
-
-<container>
-  {{#each this.model as |productItem|}}
-    <CheckoutList @product={{productItem}} />
-  {{/each}}
+<container class="container">
+  <h2 class="d-flex justify-content-around">Checkout product list</h2>
+  <article class="d-flex justify-content-around">
+    {{#each this.model as |productItem|}}
+      <CheckoutList @product={{productItem}} />
+    {{/each}}
+  </article>
   
-  <button {{action 'getSubTotals'}} type="button">
-  Calculate Total Amount
-  </button>
-  <div>TOTAL: {{subTotalCheckout}} </div>
+  <div class="d-flex justify-content-around">
+    <button {{action 'getSubTotals'}} type="button" class="mt-4 ml-4 btn btn-info">
+    Calculate Total Amount
+    </button>
+  </div>
 
-  {{#link-to "products" class="button"}}
-    Products
-  {{/link-to}}
+  <div class="mt-4 ml-4 d-flex justify-content-around">TOTAL AMOUNT: £ {{subTotalCheckout}} </div>
+
+  <div class="mt-4 ml-4">
+    {{#link-to "products" class="button"}}
+      Back to product list
+    {{/link-to}}
+  </div>
 </container>
 
 {{outlet}}

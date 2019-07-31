@@ -1,12 +1,15 @@
-<h2>Available products</h2>
-
-<container>
-  {{#each this.model as |productItem|}}
-    <ProductList @product={{productItem}}/>
-  {{/each}}
-  {{#link-to "checkout" class="button"}}
-    Checkout
-  {{/link-to}}
+<container class="container">
+  <h2 class="d-flex justify-content-around">Available products</h2>
+  <article class="d-flex justify-content-around">
+    {{#each this.model as |productItem|}}
+      <ProductList @product={{productItem}}/>
+    {{/each}}
+  </article>
+  <div class="mt-4 ml-4">
+    {{#link-to "checkout" }}
+      Go to Checkout
+    {{/link-to}}
+  </div>
 </container>
 
 {{outlet}}
