@@ -1,18 +1,8 @@
 <h2>Available products</h2>
 
 <container>
-  {{#each this.model as |product|}}
-    <ul>
-      <li>ID: {{product.id}}</li>
-      <li>Product: {{product.name}}</li>
-      <li>Price: {{product.price}}</li>
-      <li>Quantity: {{product.quantity}}</li>
-      <div>
-        <button {{action 'addProduct' product}} type="button">
-        Add to basket
-        </button>
-      </div>
-    </ul>
+  {{#each this.model as |productItem|}}
+    <ProductList @product={{productItem}}/>
   {{/each}}
   {{#link-to "checkout" class="button"}}
     Checkout

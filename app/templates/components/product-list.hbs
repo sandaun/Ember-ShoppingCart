@@ -1,0 +1,11 @@
+<ul>
+  <li>ID: {{product.id}}</li>
+  <li>Product: {{product.name}}</li>
+  <li>Price: {{product.price}}</li>
+  <li>Quantity: {{product.quantity}}</li>
+  <div>
+    <button {{action 'addProduct' product}} type="button">
+    Add to basket
+    </button>
+  </div>
+</ul>
