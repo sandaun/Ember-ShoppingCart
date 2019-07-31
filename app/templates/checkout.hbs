@@ -1,17 +1,8 @@
 <h2>Checkout</h2>
 
 <container>
-  {{#each this.model as |product|}}
-    <ul>
-      <li>Product: {{product.name}}</li>
-      <li>Price: {{product.price}} pounds</li>
-      <li>Quantity: {{product.quantity}}</li>
-      {{#if product.extra}}
-        Welcome back, <b>{{product.name}}</b>!
-      {{/if}}
-      <li>Subtotal: {{product.subTotalPrice}} </li>
-      <li>Discount: {{product.discount}}</li>
-    </ul>
+  {{#each this.model as |productItem|}}
+    <CheckoutList @product={{productItem}} />
   {{/each}}
   
   <button {{action 'getSubTotals'}} type="button">

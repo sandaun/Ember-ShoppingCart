@@ -8,15 +8,6 @@ export default Component.extend({
     this._super(...arguments);
     this.set('products', []);
   },
-  didInsertElement() {
-    console.log('this is component insert element')
-  },
-  didRender() {
-    console.log('this is didrender')
-  },
-  addProduct () {
-    console.log('this is add product')
-  },
   actions: {
     addProduct(product) { 
       this.get('products').pushObject(product.name); 
